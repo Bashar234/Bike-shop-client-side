@@ -1,5 +1,5 @@
 import axios from "axios";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import toast, { Toaster } from "react-hot-toast";
 import { Link } from "react-router-dom";
 import Footer from "../Component/Footer/Footer";
@@ -27,7 +27,7 @@ const Home = () => {
     }
   };
 
-  useEffect(() => {
+  
     const fetchData = async () => {
       setLoder(true);
       const { data } = await axios.get(
