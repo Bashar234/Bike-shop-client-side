@@ -2,7 +2,7 @@ import {
   getAuth,
   GoogleAuthProvider,
   signInWithEmailAndPassword,
-  signInWithPopup
+  signInWithPopup,
 } from "firebase/auth";
 import React, { useEffect, useState } from "react";
 import toast, { Toaster } from "react-hot-toast";
@@ -63,7 +63,7 @@ const Login = () => {
         const user = result.user;
         fetch("https://server-six-nu.vercel.app/login", {
           method: "POST",
-          
+          headers: {
             "Content-Type": "application/json",
           },
           body: JSON.stringify({
