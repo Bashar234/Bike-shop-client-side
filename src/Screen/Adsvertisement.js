@@ -58,7 +58,7 @@ const Adsvertisement = () => {
         <div className="my-10 mx-5 max-w-screen-xl lg:mx-auto">
           <h1 className="font-bold text-2xl my-10 ">
             Recommended Product({adsProduct?.length})
-         
+          </h1>
           <Carousel responsive={responsive}>
             {adsProduct?.length > 0 &&
               adsProduct.map((item, idx) => (
