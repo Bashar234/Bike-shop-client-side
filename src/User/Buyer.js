@@ -1,5 +1,5 @@
 import axios from "axios";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import toast, { Toaster } from "react-hot-toast";
 import { Link } from "react-router-dom";
 
@@ -17,7 +17,7 @@ const Buyer = () => {
     toast.success(data.msg);
     setRefresh(true);
   };
-  
+  useEffect(() => {
     const fetchData = async () => {
       setLoader(true);
       fetch(`https://server-six-nu.vercel.app/self-order/${rol?.user._id}`, {
