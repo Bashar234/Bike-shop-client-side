@@ -27,7 +27,7 @@ const Payment = () => {
           <CheckoutForm order={order} />
         </Elements>
       </div>
-    </div>
+    
   );
 };
 
